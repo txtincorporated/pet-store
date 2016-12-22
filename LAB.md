@@ -6,6 +6,28 @@
 * Specs are provided below!
 * You can use a resource library if you want
 
+## Models
+
+### Store
+
+```
+{ 
+    _id: <id>,
+    name: <name>,
+    address: {
+        street: <street>,
+        city: <city>,
+        state: <state>
+    },
+    pets: [
+        { 
+            name: <name>,
+            animal: <cat|lizard|bird|dog|fish>
+        },
+        ...
+    ]
+```
+
 ## Views
 
 * `stores`
