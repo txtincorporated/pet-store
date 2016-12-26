@@ -8,7 +8,18 @@ export default function routes($stateProvider, $urlRouterProvider) {
     
   });
 
-  $urlRouterProvider.otherwise('/');
+  $stateProvider.state({
+    name: 'stores.store',
+    url: '/:id',
+    resolve: {
+      id: ['$transitions', t => t.params().id],
+    }, 
+    
+    component: 'storesStore'
+    
+  });
+
+  $urlRouterProvider.otherwise( '/' );
 
 }
 

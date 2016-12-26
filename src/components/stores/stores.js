@@ -8,10 +8,8 @@ export default {
 controller.$inject = [ 'storesService' ];
 
 function controller(stores) {
-  stores.get();
-  this.$onInit = () => {
-    stores.get().then(stores => {
-      this.stores = stores;
-    });
-  };
+  stores.get().then(stores => {
+    this.stores = stores;
+    console.log('stores in stores: ', stores);
+  });
 }
