@@ -1,0 +1,16 @@
+
+<section ng-class="$ctrl.styles.stores">
+  <ul>
+    <h4>STORES</h4>
+    <li ng-repeat="store in $ctrl.stores">
+      <span><a ui-sref="stores({store: store.name})">{{store.name}}</a></span>
+
+    </li>
+  </ul>
+</section>
+
+<stores.add
+  store="store"
+  add="$ctrl.add">
+</stores.add>
+
