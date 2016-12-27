@@ -10,6 +10,7 @@
     * GET `/api/auth/verify` (returns `{ sucess: true|false }`)
     * POST `/api/auth/signin` (returns `{ token: <token> }`)
     * POST `/api/auth/signup` (returns `{ token: <token> }`)
+  * If you need unauthed routes for previous assignment, they are available at `/api/unauth/<resource>`
   * Token passed via header: `Authorization: Bearer <token>`
 
 ## New Welcome/Home State
