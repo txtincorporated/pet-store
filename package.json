@@ -1,7 +1,7 @@
 {
-  "name": "image-gallery",
+  "name": "pet-store",
   "version": "1.0.0",
-  "description": "image gallery",
+  "description": "pet store",
   "main": "main.js",
   "scripts": {
     "lint": "eslint .",
@@ -17,18 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/txtincorporated/image-gallery.git"
+    "url": "git+https://github.com/txtincorporated/pet-store.git"
   },
   "keywords": [
-    "image",
-    "gallery"
+    "pet store"
   ],
   "author": "Nathan P. Keene",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/txtincorporated/image-gallery/issues"
+    "url": "https://github.com/txtincorporated/pet-store/issues"
   },
-  "homepage": "https://github.com/txtincorporated/image-gallery#readme",
+  "homepage": "https://github.com/txtincorporated/pet-store#readme",
   "dependencies": {
     "angular": "^1.5.9",
     "angular-animate": "^1.6.0",

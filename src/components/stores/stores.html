@@ -3,7 +3,7 @@
   <ul>
     <h4>STORES</h4>
     <li ng-repeat="store in $ctrl.stores">
-      <span><a ui-sref="stores({store: store.name})">{{store.name}}</a></span>
+      <span><a ui-sref="stores.store({id: store._id})">{{store.name}}</a></span>
 
     </li>
   </ul>

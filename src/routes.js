@@ -3,7 +3,7 @@ routes.$inject = [ '$stateProvider', '$urlRouterProvider' ];
 export default function routes($stateProvider, $urlRouterProvider) {
   $stateProvider.state({
     name: 'stores',
-    url: '/',
+    url: '/stores',
     component: 'stores'
     
   });
@@ -12,7 +12,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
     name: 'stores.store',
     url: '/:id',
     resolve: {
-      id: ['$transitions', t => t.params().id],
+      id: ['$transition$', t => t.params().id]
     }, 
     
     component: 'storesStore'
