@@ -2,7 +2,10 @@
 ===
 
 * Pairing encouraged (unless you feel _very_ solid in angular routing and components)
-* Data API is `https://pet-store-401.herokuapp.com/api`
+* Data API:
+  * Access via:
+    * `https://pet-store-401.herokuapp.com/api`, or
+    * git clone [`https://github.com/martypdx/pet-store-server`](https://github.com/martypdx/pet-store-server)
   * Added Auth endpoints:
     * GET `/api/auth/verify` (returns `{ sucess: true|false }`)
     * POST `/api/auth/signin` (returns `{ token: <token> }`)
