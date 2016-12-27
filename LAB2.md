@@ -25,6 +25,7 @@ Optional: Add a welcome or home state that does not require auth, and has a call
 * `app.config` with http interceptor
 * Model Dialog or state for signin/signup
   * Associated components for sign in/up
+  * ngDialog will require css, make sure webpack config handles straight css
 * logout link
 
   
