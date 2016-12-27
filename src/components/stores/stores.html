@@ -1,12 +1,18 @@
 
 <section ng-class="$ctrl.styles.stores">
-  <ul>
+  <aside>
     <h4>STORES</h4>
-    <li ng-repeat="store in $ctrl.stores">
-      <span><a ui-sref="stores.store({id: store._id})">{{store.name}}</a></span>
+    <ul>
+      <li ng-repeat="store in $ctrl.stores">
+        <span><a ui-sref="stores.store({id: store._id})" ng-click="$ctrl.seeStore()">{{store.name}}</a></span>
 
-    </li>
-  </ul>
+      </li>
+    </ul>
+
+  </aside>
+
+  <h1>STORE DETAIL</h1>
+  <stores.store></stores.store>
 </section>
 
 <stores.add
