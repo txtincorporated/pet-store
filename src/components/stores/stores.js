@@ -2,24 +2,21 @@ import template from './stores.html';
 
 export default {
   template,
-  bindings: {
-    id: '<'
-  },
   controller
 };
 
-controller.$inject = [ 'storesService', '$state' ];
+controller.$inject = [ 'storesService' ];
 
-function controller(stores, $state) {
+function controller(stores) {
   console.log( 'IN STORES' );
 
-  this.seeStore = (id) => {
-    console.log( 'seeStore called, id: ', id ) ;
-    $state.go( 'stores.store' );
-  };
+  // this.seeStore = (id) => {
+  //   console.log( 'seeStore called, id: ', id ) ;
+  //   $state.go( 'stores.store' );
+  // };
 
   this.$onInit = () => {
-    stores.getStores().then(stores => {
+    stores.get().then(stores => {
       this.stores = stores;
       console.log( 'stores in stores: ', stores );
 

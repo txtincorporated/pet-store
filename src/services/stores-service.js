@@ -4,7 +4,7 @@ export default function storesService( $http, apiUrl ) {
   return {
     get(id) {
       console.log('In get');      
-      if(!id) this.getStores();
+      if(!id) return this.getStores();
       return $http.get( `${apiUrl}/stores/${id}` )
       .then( res => res.data );
       

@@ -19,7 +19,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
     
   });
 
-  $urlRouterProvider.otherwise( '/' );
+  $urlRouterProvider.otherwise( '/stores' );
 
 }
 
