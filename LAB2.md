@@ -24,7 +24,7 @@ Optional: Add a welcome or home state that does not require auth, and has a call
 * logout link
 
   
-## Rubric *20pts*
+## Rubric *10pts*
 
 * Services *3pts*
 * Setup routes, http, and auth (run via `$stateChangeStart`) *3pts*
