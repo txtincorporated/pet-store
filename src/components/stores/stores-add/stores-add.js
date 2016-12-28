@@ -3,7 +3,11 @@ import template from './stores-add.html';
 export default {
   template,
   bindings: {
-    add: '='
+    stores: '<',
+    add: '<'
+  },
+  require: {
+    parent: '^stores'
   },
   controller
 
@@ -12,25 +16,28 @@ export default {
 controller.$inject = [ 'storesService' ];
 
 function controller() {
-
+  console.log('IN ADD STORES');
   this.reset = () => {
     this.name = '';
-    this.street = '';
-    this.city = '';
+    this.address = {
+      street: '',
+      city: '',
+      state: ''
+    };
 
   };
 
   this.reset();
 
   this.addStore = () => {
-    this.add({
-      name: this.address.name, 
-      street: this.address.street,
-      city: this.address.city
+    this.parent.add({
+      name: this.name, 
+      address: {
+        street: this.address.street,
+        city: this.address.city,
+        state: this.address.state
 
+      },
     });
   };
-
-  this.reset();  
-
 }
