@@ -1,4 +1,3 @@
-
 <section ng-class="$ctrl.styles.stores">
   <aside>
     <h4>STORES</h4>
@@ -9,14 +8,11 @@
       </li>
     </ul>
 
-  <h1>STORE DETAIL</h1>
-  <stores.store></stores.store>
-
   </aside>
+
+  <div>
+    <h1>STORE DETAIL</h1>
+    <ui-view></ui-view>
+
+  </div>
 </section>
-
-<stores.add
-  store="store"
-  add="$ctrl.add">
-</stores.add>
-

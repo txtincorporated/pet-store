@@ -5,6 +5,7 @@ import resource from 'angular-resource';
 import components from './components';
 import services from './services';
 import routes from './routes';
+import './scss/main.scss';
 
 const app = angular.module('myApp', [
   components,
@@ -16,6 +17,6 @@ const app = angular.module('myApp', [
 
 app.config(routes);
 
-const dev = 'https://pet-store-401.herokuapp.com/api';
+const dev = 'https://pet-store-401.herokuapp.com/api/unauth';
 
 app.value('apiUrl', dev);

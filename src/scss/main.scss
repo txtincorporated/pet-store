@@ -1,7 +1,15 @@
 aside {
-  display: inline;  
+  // display: inline;  
+  float: left;  
+
 }
 
-main {
-  float: right;  
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer {
+  margin: 100% auto 0 45%;
 }

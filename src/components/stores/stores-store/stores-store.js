@@ -1,4 +1,5 @@
 import template from './stores-store.html';
+// import styles from './stores-store.scss';
 
 export default {
   template,
@@ -9,10 +10,11 @@ export default {
 
 };
 
-controller.inject = [ 'storesService' ];
+controller.$inject = [ 'storesService' ];
 
 function controller(stores) {
-  console.log('stores.store, getStore: ', this.store.id);
+  // this.styles = styles;
+  // console.log('stores.store, getStore: ', this.store.id);
   this.$onInit = () => {
     stores.get(this.id)
     .then(store => {

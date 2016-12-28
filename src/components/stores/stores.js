@@ -1,4 +1,5 @@
 import template from './stores.html';
+import styles from './stores.scss';
 
 export default {
   template,
@@ -8,12 +9,9 @@ export default {
 controller.$inject = [ 'storesService' ];
 
 function controller(stores) {
+  this.styles = styles;
+  
   console.log( 'IN STORES' );
-
-  // this.seeStore = (id) => {
-  //   console.log( 'seeStore called, id: ', id ) ;
-  //   $state.go( 'stores.store' );
-  // };
 
   this.$onInit = () => {
     stores.get().then(stores => {
