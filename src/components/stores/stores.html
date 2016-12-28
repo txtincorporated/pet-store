@@ -8,13 +8,17 @@
       </li>
     </ul>
 
-  <ui-view name="stores.add"></ui-view>    
+  <stores-add
+    add="add"
+  ></stores-add>    
 
   </aside>
 
   <div>
     <h1>STORE DETAIL</h1>
-    <ui-view name="stores.store"></ui-view>
+    <stores-store
+      store="store"
+    ></stores-store>
 
   </div>
 </section>

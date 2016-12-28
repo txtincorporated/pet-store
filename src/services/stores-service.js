@@ -6,7 +6,10 @@ export default function storesService( $http, apiUrl ) {
       console.log('In get');      
       if(!id) return this.getStores();
       return $http.get( `${apiUrl}/stores/${id}` )
-      .then( res => res.data );
+      .then( res => {
+        console.log('res.data: ', res.data);
+        return res.data;
+      });
       
     },
 

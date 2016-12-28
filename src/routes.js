@@ -4,6 +4,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
   $stateProvider.state({
     name: 'stores',
     url: '/stores',
+
     component: 'stores'
     
   });
@@ -12,7 +13,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
     name: 'stores.store',
     url: '/:id',
     resolve: {
-      id: ['$transition$', t => t.params().id]
+      id: ['$transition$', t => t.params().id],
+      store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)]
     }, 
     
     component: 'storesStore'

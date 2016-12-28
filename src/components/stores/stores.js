@@ -6,7 +6,7 @@ export default {
   controller
 };
 
-controller.$inject = [ 'storesService' ];
+controller.$inject = [ 'storesService', '$state' ];
 
 function controller(stores) {
   this.styles = styles;
@@ -20,4 +20,13 @@ function controller(stores) {
 
     });
   };
+
+  this.add = (store, $state) => {
+    stores.add( store )
+    .then(saved => {
+      this.stores.push( saved );
+    })
+    .then($state.go('stores.store( {id: saved._id} )'));
+  };
+
 }

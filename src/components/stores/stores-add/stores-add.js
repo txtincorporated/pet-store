@@ -3,7 +3,7 @@ import template from './stores-add.html';
 export default {
   template,
   bindings: {
-    address: '<'
+    add: '='
   },
   controller
 
@@ -11,12 +11,26 @@ export default {
 
 controller.$inject = [ 'storesService' ];
 
-function controller(stores) {
-  this.add = store => {
-    stores.add( store )
-    .then(saved => {
-      this.stores.push( saved );
+function controller() {
+
+  this.reset = () => {
+    this.name = '';
+    this.street = '';
+    this.city = '';
+
+  };
+
+  this.reset();
+
+  this.addStore = () => {
+    this.add({
+      name: this.address.name, 
+      street: this.address.street,
+      city: this.address.city
 
     });
   };
+
+  this.reset();  
+
 }

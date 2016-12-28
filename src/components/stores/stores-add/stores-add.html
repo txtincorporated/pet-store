@@ -5,7 +5,7 @@
         <label>NAME: <input ng-model="$ctrl.address.name" type="text"></label>
       </div>
       <div>
-        <label>STREET: <input ng-model="$ctrl.address.stree" type="text"></label>
+        <label>STREET: <input ng-model="$ctrl.address.street" type="text"></label>
       </div>
       <div>
         <label>CITY: <input ng-model="$ctrl.address.city" type="text"></label>
@@ -14,10 +14,6 @@
         <label>STATE: <input ng-model="$ctrl.address.state" type="text"></label>
       </div>
       <!-- the props don't go here it goes in stores-add.js -->
-      <button ng-click="stores.add({ 
-        name: store.address.name, 
-        street: store.address.street,
-
-      })">ADD</button>
+      <button ng-click="$ctrl.addStore()">ADD</button>
     </div>
   </section>
