@@ -17,10 +17,10 @@ export default function storesService( $http, apiUrl ) {
       
     },
 
-    // add(store) {
-    //   return $http.post( `${apiUrl}/stores`, store )
-    //   .then( res => res.data );
+    add(store) {
+      return $http.post( `${apiUrl}/stores`, store )
+      .then( res => res.data );
 
-    // }
+    }
   };
 }
