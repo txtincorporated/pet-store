@@ -2,7 +2,7 @@ userService.$inject = [ 'tokenService', '$http', 'apiUrl' ];
 
 export default function userService(token, $http, apiUrl) {
   const current = token.get();
-
+  
   if(current) {
     $http
       .get( `${apiUrl}/auth/verify` )

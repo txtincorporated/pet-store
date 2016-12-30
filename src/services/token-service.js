@@ -5,7 +5,7 @@ const TOKEN_NAME = 'token';
 export default function tokenService($window) {
 
   return {
-    get() {
+    get() {      
       return $window.localStorage.getItem( TOKEN_NAME );
     },
 

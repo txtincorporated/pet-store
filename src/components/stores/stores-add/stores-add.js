@@ -16,7 +16,6 @@ export default {
 controller.$inject = [ 'storesService' ];
 
 function controller() {
-  console.log('IN ADD STORES');
   this.reset = () => {
     this.name = '';
     this.address = {
