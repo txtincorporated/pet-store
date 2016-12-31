@@ -2,9 +2,7 @@ import template from './stores-store-addpet.html';
 
 export default {
   template,
-  bindings: {
-    pets: '<'
-  },
+  
   require: {
     parent: '^storesStore'
   },
@@ -12,10 +10,11 @@ export default {
 
 };
 
-controller.$inject = [ 'petService' ];
+controller.$inject = [ 'petService', '$state' ];
 
-function controller(parent) {
+function controller() {
   console.log('IN ADD PETS');
+  this.pets = ['cat', 'lizard', 'bird', 'dog', 'fish'];
   this.reset = () => {
     this.name = '';
     this.animal = '';
@@ -25,10 +24,11 @@ function controller(parent) {
   this.reset();
 
   this.addpet = () => {
-    parent.addPet({
+    this.parent.addPet({
       name: this.name, 
       animal: this.animal,
-      storeId: this.parent.store._id 
+      store: this.parent.store._id 
+      
     });
   };
 }

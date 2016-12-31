@@ -4,15 +4,16 @@ export default {
   template,
   bindings: {
     id: '<',
-    store: '<'
+    store: '<',
+    pets: '<'
   },
   controller
 
 };
 
-controller.$inject = [ /*'petService', */'storesService', '$state' ];
+controller.$inject = [ 'storesService', 'petService', '$state' ];
 
-function controller(stores) {
+function controller(stores, pets, $state) {
   this.$onInit = () => {
     console.log('this.id: ', this.id);
     stores.get(this.id)
@@ -21,12 +22,21 @@ function controller(stores) {
       console.log('store in stores-store: ', this.store);
     });
 
-    this.addPet = (store, pet, petService, $state) => {
-      petService.add( store, pet )
+    this.addPet = (pet) => {
+      pets.add( pet )
       .then(() => {
-        $state.go('stores.store', { id: store._id });
+        $state.go('stores');
+
+      })
+      .then(() => {
+        $state.go('stores.store', { id: this.store._id });
 
       });
+    };
+
+    this.cancel = () => {
+      $state.reload('stores.store', { id: this.store._id });
+
     };
   };
 }

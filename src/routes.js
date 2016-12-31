@@ -17,7 +17,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
     url: '/detail/:id',
     resolve: {
       id: ['$transition$', t => t.params().id],
-      store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)]
+      store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)],
+      pets: [ 'petService', (petService) => petService.getPets() ]
     }, 
     
     // views: {
