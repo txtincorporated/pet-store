@@ -20,13 +20,15 @@ export default function routes($stateProvider, $urlRouterProvider) {
       store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)]
     }, 
     
-    component: 'storesStore',
+    component: 'storesStore'
+    
+  });
 
-    views: {
-      addpet: {
-        component: 'storesAddpet'
-      }
-    }
+
+  $stateProvider.state({
+    name: 'stores.store.addpet',
+    url: '/addpet',
+    component: 'storesStoreAddpet'
     
   });
 

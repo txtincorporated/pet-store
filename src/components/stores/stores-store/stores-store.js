@@ -10,7 +10,7 @@ export default {
 
 };
 
-controller.$inject = [ /*'petService', */'storesService'/*, '$state'*/ ];
+controller.$inject = [ /*'petService', */'storesService', '$state' ];
 
 function controller(stores) {
   this.$onInit = () => {
