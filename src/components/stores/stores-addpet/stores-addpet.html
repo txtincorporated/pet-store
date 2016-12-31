@@ -1,0 +1,23 @@
+  <section ng-class="$ctrl.styles.storesadd">
+    <div>
+      <h4>ADD PET</h4>
+
+      <div>
+        <label>NAME: <input ng-model="$ctrl.name" type="text"></label>
+
+      </div>
+
+      <div>
+        <select ng-model="$ctrl.animal" name="text">
+          <option ng-repeat="pet in $ctrl.pets">
+            {{pet}}
+          </option>
+        </select>
+      
+      </div>
+
+     <!-- the props don't go here it goes in stores-add.js -->
+      <button ng-click="$ctrl.addPet()">ADD</button>
+    
+    </div>
+  </section>
