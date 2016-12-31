@@ -1,4 +1,4 @@
-import template from './stores-addpet.html';
+import template from './stores-store-addpet.html';
 
 export default {
   template,
@@ -14,7 +14,7 @@ export default {
 
 controller.$inject = [ 'petService' ];
 
-function controller() {
+function controller(parent) {
   console.log('IN ADD PETS');
   this.reset = () => {
     this.name = '';
@@ -25,7 +25,7 @@ function controller() {
   this.reset();
 
   this.addpet = () => {
-    this.parent.addPet({
+    parent.addPet({
       name: this.name, 
       animal: this.animal 
     });
