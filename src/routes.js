@@ -23,7 +23,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
     component: 'storesStore',
 
     views: {
-      addPet: {
+      addpet: {
         component: 'storesAddpet'
       }
     }

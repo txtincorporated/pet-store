@@ -10,7 +10,7 @@ export default {
 
 };
 
-controller.$inject = [ 'petService', 'storesService', '$state' ];
+controller.$inject = [ /*'petService', */'storesService'/*, '$state'*/ ];
 
 function controller(stores) {
   this.$onInit = () => {
@@ -22,7 +22,7 @@ function controller(stores) {
     });
 
     this.addPet = (store, pet, petService, $state) => {
-      petService.add(store, pet)
+      petService.add( store, pet )
       .then(() => {
         $state.go('stores.store', { id: store._id });
 

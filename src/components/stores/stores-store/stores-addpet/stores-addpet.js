@@ -27,7 +27,8 @@ function controller() {
   this.addpet = () => {
     this.parent.addPet({
       name: this.name, 
-      animal: this.animal 
+      animal: this.animal,
+      storeId: this.parent.store._id 
     });
   };
 }
