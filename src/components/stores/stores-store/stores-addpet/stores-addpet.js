@@ -3,8 +3,7 @@ import template from './stores-addpet.html';
 export default {
   template,
   bindings: {
-    pets: '<',
-    addPet: '<'
+    pets: '<'
   },
   require: {
     parent: '^storesStore'
