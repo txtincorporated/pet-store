@@ -40,4 +40,9 @@ function controller() {
       },
     });
   };
+
+  this.scratch = () => {
+    this.parent.cancel();
+
+  };
 }

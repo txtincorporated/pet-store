@@ -23,19 +23,12 @@ function controller(stores, pets, $state) {
     });
 
     this.addPet = (pet) => {
-      pets.add( pet )
-      .then(() => {
-        $state.go('stores');
-
-      })
-      .then(() => {
-        $state.go('stores.store', { id: this.store._id });
-
-      });
+      pets.add( pet );
+      $state.go('stores.store.pets', { id: this.store._id }, { location: 'replace', inherit: false, reload: true });
     };
 
     this.cancel = () => {
-      $state.reload('stores.store', { id: this.store._id });
+      $state.go( 'stores.store.pets', {id: this.store._id} );
 
     };
   };
