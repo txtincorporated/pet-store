@@ -1,4 +1,5 @@
 import template from './stores-add.html';
+import styles from './stores-add.scss';
 
 export default {
   template,
@@ -16,6 +17,8 @@ export default {
 controller.$inject = [ 'storesService' ];
 
 function controller() {
+  this.styles = styles;
+
   console.log('IN ADD STORES');
   this.reset = () => {
     this.name = '';

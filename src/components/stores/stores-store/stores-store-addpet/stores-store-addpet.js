@@ -1,4 +1,5 @@
 import template from './stores-store-addpet.html';
+import styles from './stores-store-addpet.scss';
 
 export default {
   template,
@@ -12,6 +13,8 @@ export default {
 controller.$inject = [ 'petService' ];
 
 function controller() {
+  this.styles = styles;
+
   console.log('IN ADD PETS');
   this.pets = ['cat', 'lizard', 'bird', 'dog', 'fish'];
   this.reset = () => {
