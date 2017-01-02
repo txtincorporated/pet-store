@@ -14,7 +14,7 @@ export default {
 
 };
 
-controller.$inject = [ 'storesService' ];
+// controller.$inject = [ 'storesService' ];
 
 function controller() {
   this.styles = styles;

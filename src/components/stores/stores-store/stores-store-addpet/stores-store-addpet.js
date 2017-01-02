@@ -10,8 +10,6 @@ export default {
 
 };
 
-controller.$inject = [ 'petService' ];
-
 function controller() {
   this.styles = styles;
 
@@ -33,6 +31,7 @@ function controller() {
 
     });
   };
+  
   this.scratch = () => {
     this.parent.cancel();
 
