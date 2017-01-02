@@ -1,13 +1,11 @@
 <section ng-class="$ctrl.styles.stores">
   <aside>
-
-    <h4>STORES</h4>
-
     <div>
       <select 
         ng-model="$ctrl.selected"
         ng-change="$ctrl.toStore(event)"
-        ng-options="store._id as store.name for store in $ctrl.stores">
+        ng-options="store._id as store.name for store in $ctrl.stores"
+        >
         <option value="">STORES</option>
       </select>
     </div>
@@ -15,9 +13,9 @@
 
   </aside>
 
-  <div>
-    <h1>STORE DETAIL</h1>
-      <ui-view></ui-view>
+    <div class="store-details">
+      <h2>STORE DETAILS</h2>
+        <ui-view></ui-view>
 
-  </div>
+    </div>
 </section>
