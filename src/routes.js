@@ -36,11 +36,26 @@ export default function routes($stateProvider, $urlRouterProvider) {
     url: '/detail/:id',
     resolve: {
       id: ['$transition$', t => t.params().id],
-      store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)]
-
+      store: ['$transition$', 'storesService', (t, stores) => stores.get(t.params().id)],
+      pets: [ 'petService', (petService) => petService.getPets() ]
     }, 
     
     component: 'storesStore'
+    
+  });
+
+
+  $stateProvider.state({
+    name: 'stores.store.addpet',
+    url: '/addpet',
+    component: 'storesStoreAddpet'
+    
+  });
+
+  $stateProvider.state({
+    name: 'stores.store.pets',
+    url: '/pets',
+    component: 'storesStorePets'
     
   });
 

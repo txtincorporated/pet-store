@@ -7,15 +7,15 @@
     <div>
       <p>{{$ctrl.store.address.street}}</p>
       <p><span>{{$ctrl.store.address.city}}, {{$ctrl.store.address.state}}</span></p>
-      <br />
-      <h5>PETS AVAILABLE:</h5>
-      <ul ng-repeat="pet in $ctrl.store.pets">
-        <li>
-          <p>NAME: {{pet.name}}</p>
-          <p>TYPE: {{pet.animal}}</p>
+      
+      <br /> 
+           
+      <button ui-sref="stores.store.pets">SEE PETS</button>
+      <button ui-sref="stores.store.addpet">ADD PET</button>
 
-        </li>
-      </ul>
     </div>    
+
+    <ui-view></ui-view>
+
   </div>
 </section>

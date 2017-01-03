@@ -21,6 +21,6 @@ export default function storesService( $http, apiUrl ) {
       return $http.post( `${apiUrl}/stores`, store )
       .then( res => res.data );
 
-    }
+    },
   };
 }

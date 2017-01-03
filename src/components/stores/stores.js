@@ -25,4 +25,9 @@ function controller(stores, $state) {
 
     });
   };
+
+  this.cancel = () => {
+    $state.go( 'stores', {}, { location: 'replace', inherit: false, reload: true } );
+
+  };
 }
