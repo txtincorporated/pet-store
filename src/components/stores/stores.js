@@ -4,7 +4,8 @@ import styles from './stores.scss';
 export default {
   template,
   bindings: {
-    stores: '<'
+    stores: '<',
+    selected: '='
   },
   controller
 };
@@ -15,6 +16,17 @@ function controller(stores, $state) {
   this.styles = styles;
   
   this.$onInit = () => {
+  };
+
+  this.toStore = () => {
+    console.log('IN TOSTORE');
+    // if(!this.selected) return;
+    $state.go('stores.store', { id: this.selected });
+  };
+
+  this.uiOnParamsChanged = params => {
+    console.log('uiOnParamsChanged params: ', params);
+    if(params.id) this.selected = params.id;
   };
 
   this.add = (store) => {

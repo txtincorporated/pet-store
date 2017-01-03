@@ -4,8 +4,7 @@ export default {
   template,
   bindings: {
     id: '<',
-    store: '<',
-  //   pets: '<'
+    store: '<'
 
   }
 };

@@ -1,21 +1,23 @@
 <section ng-class="$ctrl.styles.stores">
   <aside>
-    <h4>STORES</h4>
+    <div>
+      <select 
+        ng-model="$ctrl.selected"
+        ng-change="$ctrl.toStore(event)"
+        ng-options="store._id as store.name for store in $ctrl.stores"
+        >
+        <option value="">STORES</option>
+
+      </select>
+    </div>
     
-    <ul>
-      <li ng-repeat="store in $ctrl.stores">
-        <span><a ui-sref="stores.store({id: store._id})">{{store.name}}</a></span>
-
-      </li>
-    </ul>
-
-  <a ui-sref="stores.add">ADD STORE</a>  
+    <button ui-sref="stores.add">ADD STORE</button>  
 
   </aside>
 
-  <div>
-    <h1>STORE DETAIL</h1>
-      <ui-view></ui-view>
+    <div class="store-details">
+      <h2>STORE DETAILS</h2>
+        <ui-view></ui-view>
 
-  </div>
+    </div>
 </section>
