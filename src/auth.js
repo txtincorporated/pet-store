@@ -20,7 +20,5 @@ export default function auth($rootScope, userService, ngDialog, $state) {
         }]
       });
     }
-    
-
   });
 }

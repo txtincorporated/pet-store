@@ -7,6 +7,7 @@ export default {
     id: '<',
     store: '<',
     pets: '<'
+    
   },
   controller
 
@@ -20,11 +21,13 @@ function controller(stores, pets, $state) {
     stores.get(this.id)
     .then(store => {
       this.store = store;
+      
     });
 
     this.addPet = (pet) => {
       pets.add( pet );
       $state.go('stores.store.pets', { id: this.store._id }, { location: 'replace', inherit: false, reload: true });
+      
     };
 
     this.cancel = () => {

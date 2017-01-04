@@ -29,7 +29,6 @@ function interceptor($window, tokenService, $state) {
 
       if(response.status == 403) {
         tokenService.remove();
-
         
         $state.go( '' );
 

@@ -7,8 +7,8 @@ export default function storesService( $http, apiUrl ) {
       return $http.get( `${apiUrl}/stores/${id}` )
       .then( res => {
         return res.data;
-      });
-      
+        
+      });      
     },
 
     getStores() {

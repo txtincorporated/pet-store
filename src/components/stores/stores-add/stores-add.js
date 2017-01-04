@@ -6,9 +6,11 @@ export default {
   bindings: {
     stores: '<',
     add: '<'
+
   },
   require: {
     parent: '^stores'
+
   },
   controller
 
@@ -23,8 +25,8 @@ function controller() {
       street: '',
       city: '',
       state: ''
-    };
 
+    };
   };
 
   this.reset();
